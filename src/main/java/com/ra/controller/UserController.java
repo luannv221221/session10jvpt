@@ -24,4 +24,16 @@ public class UserController {
         userService.register(user);
         return "redirect:/";
     }
+
+    @GetMapping("/login")
+    public String login(){
+        User user = new User();
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String postLogin(@ModelAttribute("user") User user){
+
+        return "redirect:/";
+    }
 }

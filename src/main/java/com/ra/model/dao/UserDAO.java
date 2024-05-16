@@ -4,4 +4,5 @@ import com.ra.model.entity.User;
 
 public interface UserDAO {
     Boolean save(User user);
+    User findByEmailAndPassword(String email,String password);
 }

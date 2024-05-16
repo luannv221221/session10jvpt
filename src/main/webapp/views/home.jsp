@@ -39,7 +39,7 @@
                    aria-expanded="false">Account</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="/register">Register</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
+                    <a class="dropdown-item" href="/login">Action 2</a>
                 </div>
             </li>
         </ul>
