@@ -25,29 +25,21 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
-            <h1 class="text-center text-danger">Thêm mới danh muc</h1>
-            <f:form action="" method="post" modelAttribute="category">
+            <h1 class="text-center text-danger">Đăng ký</h1>
+            <f:form action="" method="post"  modelAttribute="user">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Category Name</label>
-                    <f:input type="text" class="form-control" id="exampleInputEmail1" path="categoryName"/>
+                    <label for="exampleInputEmail1">Full Name</label>
+                    <f:input type="text" class="form-control" id="exampleInputEmail1" path="fullName"/>
                 </div>
                 <div class="form-group">
-                    <label for="Description">Description</label>
-                    <f:input type="text" class="form-control" id="Description" path="description"/>
+                    <label for="Description">Email</label>
+                    <f:input type="email" class="form-control" id="Description" path="email"/>
                 </div>
                 <div class="form-group">
-                    <label>Status</label>
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <f:radiobutton class="form-check-input" path="categoryStatus"  value="1"/> Show
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <f:radiobutton class="form-check-input"  path="categoryStatus"  value="0"/> Hidden
-                        </label>
-                    </div>
+                    <label for="password">Password</label>
+                    <f:input type="password" class="form-control" id="password" path="password"/>
                 </div>
+
                 <button type="submit" class="btn btn-primary">Theem mowi</button>
             </f:form>
         </div>
