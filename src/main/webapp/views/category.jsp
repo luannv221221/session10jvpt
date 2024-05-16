@@ -24,6 +24,19 @@
     <div class="row">
         <div class="col-lg-8">
             <h1 class="text-center text-danger">Danh sach danh muc</h1>
+            <c:if test="${!empty success}">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>${success}</strong>
+                </div>
+            </c:if>
+
+
+            <script>
+                $(".alert").alert();
+            </script>
             <table class="table">
                 <thead>
                 <tr>
@@ -31,6 +44,7 @@
                     <th>Category Name</th>
                     <th>Description</th>
                     <th>Satus</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -40,6 +54,10 @@
                         <td>${item.categoryName}</td>
                         <td>${item.description}</td>
                         <td>${item.categoryStatus ? 'Show' : 'Hiden'}</td>
+                        <td>
+                            <a href="/edit/${item.id}" class="btn btn-success">Edit</a>
+                            <a href="/delete/${item.id}" onclick="return confirm('Chắc chưa')"  class="btn btn-danger">Xóa</a>
+                        </td>
                     </tr>
 
                 </c:forEach>

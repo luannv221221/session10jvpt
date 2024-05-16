@@ -20,4 +20,19 @@ public class CategoryServiceImpl implements CategoryService{
     public Boolean create(Category category) {
         return categoryDAO.create(category);
     }
+
+    @Override
+    public Category findById(Integer id) {
+        return categoryDAO.findById(id);
+    }
+
+    @Override
+    public Boolean update(Category category) {
+        return categoryDAO.update(category);
+    }
+
+    @Override
+    public Boolean delete(Integer id) {
+        return categoryDAO.delete(id);
+    }
 }
