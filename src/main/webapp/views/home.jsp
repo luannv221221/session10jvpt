@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.ra.model.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 5/14/2024
@@ -36,10 +36,11 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Account</a>
+                   aria-expanded="false">
+                    ${!empty (userLogin.getFullName()) ? userLogin.getFullName() : 'Account' }</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="/register">Register</a>
-                    <a class="dropdown-item" href="/login">Action 2</a>
+                    <a class="dropdown-item" href="/login">Login</a>
                 </div>
             </li>
         </ul>

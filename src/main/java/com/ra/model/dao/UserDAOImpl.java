@@ -29,13 +29,12 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public User findByEmailAndPassword(String email, String password) {
+    public User findByEmail(String email) {
         Session session = sessionFactory.openSession();
         try {
-            String hql = "FROM User as u where u.email=:email and u.password=:password";
+            String hql = "FROM User as u where u.email=:email";
             return session.createQuery(hql,User.class)
-                    .setParameter("email",email)
-                    .setParameter("password",password).uniqueResult();
+                    .setParameter("email",email).uniqueResult();
         } catch (Exception exception){
             exception.printStackTrace();
         } finally {

@@ -25,6 +25,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
+            <c:if test="${!empty err}">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>${err}</strong>
+                </div>
+            </c:if>
+
+
+            <script>
+                $(".alert").alert();
+            </script>
             <h1 class="text-center text-danger">Login</h1>
             <f:form action="" method="post"  modelAttribute="user">
 

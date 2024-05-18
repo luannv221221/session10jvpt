@@ -17,4 +17,16 @@ public class UserServiceImpl implements UserService{
         userDAO.save(user);
         return userDAO.save(user);
     }
+
+    @Override
+    public User login(User user) {
+        User userFromDatabase = userDAO.findByEmail(user.getEmail());
+        if(userFromDatabase != null){
+            // check password
+            if(BCrypt.checkpw(user.getPassword(),userFromDatabase.getPassword())){
+                return  userFromDatabase;
+            }
+        }
+        return null;
+    }
 }

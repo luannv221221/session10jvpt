@@ -4,4 +4,5 @@ import com.ra.model.entity.User;
 
 public interface UserService {
     Boolean register(User user);
+    User login(User user);
 }
