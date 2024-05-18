@@ -49,7 +49,10 @@
                     <label for="password">Password</label>
                     <f:input type="password" class="form-control" id="password" path="password"/>
                 </div>
-
+                <div class="form-check">
+                    <input type="checkbox" name="check" ${checked ? 'checked' : ''} class="form-check-input" value="true" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Nhớ tài khoản  ${checked}</label>
+                </div>
                 <button type="submit" class="btn btn-primary">Login</button>
             </f:form>
         </div>

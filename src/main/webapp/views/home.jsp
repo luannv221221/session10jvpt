@@ -41,6 +41,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="/register">Register</a>
                     <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
             </li>
         </ul>
